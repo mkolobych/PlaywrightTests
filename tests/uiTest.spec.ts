@@ -12,12 +12,9 @@ test.describe("Work with us page", () => {
         await workWithUs.workWithUsbutton.click();
 
         await expect(page).toHaveURL("https://planetakino.ua/about/vacancy/");
-
         await expect(page).toHaveTitle("Вакансії Main");
-
         await expect(workWithUs.workHeaderLeft).toHaveText("Станьчастиною");
         await expect(workWithUs.workHeaderRight).toHaveText("суперкоманди!");
-
         await expect(workWithUs.aboutThePlanet).toBeVisible();
     });
 
@@ -28,11 +25,8 @@ test.describe("Work with us page", () => {
         await workWithUs.vacanciesButton.click();
 
         await expect(page).toHaveURL("https://planetakino.ua/vacancies/");
-
         await expect(page).toHaveTitle("Vacancy");
-
         await expect(workWithUs.vacancyHeader).toBeVisible();
-
         await expect(workWithUs.lvivVacancyButton).toHaveText("Львів");
     });
 
@@ -44,11 +38,9 @@ test.describe("Work with us page", () => {
         await workWithUs.lvivVacancyButton.click();
 
         await expect(page).toHaveTitle("Vacancy");
-
         await expect(workWithUs.lvivForumFilter).toBeVisible();
         await expect(workWithUs.lvivKingCrossFilter).toBeVisible();
         await expect(workWithUs.lvivleolendFilter).toBeVisible();
-
         await expect(workWithUs.leaveResumeButton).toHaveText("Залиш резюме");
     });
 });
